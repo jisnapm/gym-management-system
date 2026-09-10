@@ -36,7 +36,7 @@ class GymMemberManager(DbConnect):
             values = [v for v in kwargs.values()]
             self.cursor.execute(q, values)
             self.connect.commit()
-            print("Member Added Successfully!")
+            # print("Member Added Successfully!")
         except Exception as e:
             print(e)
 
@@ -104,12 +104,12 @@ class GymMemberManager(DbConnect):
 connect_instance = DbConnect()
 print(connect_instance.get_connected())
 
-member_instance = GymMemberManager()
+# member_instance = GymMemberManager()
 # member_instance.post(name= "Manu", place= "Tvm", mobile= 8796541230, plan= "1 month", fee= 1000, joined_date= datetime.today())
 # member_instance.post(name= "Hari", place= "Kochi", mobile= 7596840123, plan= "3 month", fee= 2800, joined_date= datetime.today())
 # member_instance.post(name= "Anu", place= "Calicut", mobile= 8659320147, plan= "6 month", fee= 5600, joined_date= datetime.today())
 # member_instance.post(name= "Ashley", place= "Kannur", mobile= 9685320174, plan= "3 month", fee= 2800, joined_date= datetime.today())
-member_instance.get()
-member_instance.retrieve(3)
-member_instance.delete(4)
+# member_instance.get()
+# member_instance.retrieve(3)
+# member_instance.delete(4)
 # member_instance.put(1, name= 'Arya', place= 'Kottayam')
