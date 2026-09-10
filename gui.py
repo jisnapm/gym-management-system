@@ -14,6 +14,6 @@ with t1:
     date = st.text_input("Enter Joined Date: ")
     if st.button("Add New Donor"):
         member_instance.post(name= name, place= place, mobile= mobile, plan= plan, fee= fee, joined_date=date)
-
+        st.success("Gym Member Added Successfully!")
 with t2:
     st.title("View Members")
