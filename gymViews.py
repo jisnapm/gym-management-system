@@ -22,9 +22,9 @@ class GymMemberManager(DbConnect):
             q = "select * from member"
             self.cursor.execute(q)
             records = self.cursor.fetchall()
-            # print(records)
-            for data in records:
-                print(data)
+            # for data in records:
+            #     print(data)
+            return records
         except Exception as e:
             print(e)
 
@@ -101,8 +101,8 @@ class GymMemberManager(DbConnect):
             print(e)
 
 
-connect_instance = DbConnect()
-print(connect_instance.get_connected())
+# connect_instance = DbConnect()
+# print(connect_instance.get_connected())
 
 # member_instance = GymMemberManager()
 # member_instance.post(name= "Manu", place= "Tvm", mobile= 8796541230, plan= "1 month", fee= 1000, joined_date= datetime.today())
